@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMMC Assist</title>
+  <meta name="description" content="A plain-language CMMC readiness check for small defense contractors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">CA</span>
+        <div>
+          <p class="brand-name">CMMC Assist</p>
+          <p class="brand-tag">A plain-language readiness check for small defense contractors</p>
+        </div>
+      </div>
+    </div>
+    <nav class="wrap tabs" role="tablist" aria-label="Assessment levels">
+      <button class="tab" role="tab" id="tab-level-1" aria-controls="level-1" data-panel="level-1">Level 1</button>
+      <button class="tab" role="tab" id="tab-level-2" aria-controls="level-2" data-panel="level-2">Level 2</button>
+      <button class="tab" role="tab" id="tab-level-3" aria-controls="level-3" data-panel="level-3">Level 3</button>
+      <button class="tab" role="tab" id="tab-about" aria-controls="about" data-panel="about">About</button>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <!-- LEVEL 1 -->
+    <section class="panel" role="tabpanel" id="level-1" aria-labelledby="tab-level-1">
+      <div class="intro">
+        <p class="eyebrow">Level 1 · Foundational</p>
+        <h1>Is your company ready for CMMC Level 1?</h1>
+        <p class="lede">Level 1 applies to companies that handle <strong>Federal Contract Information (FCI)</strong>: non-public information you receive or create under a government contract, like pricing, schedules, or order details. It has 15 requirements that <strong>must all be met to achieve level 1 CMMC readiness</strong>.</p>
+        <div class="callout">
+          <p><strong>How to answer:</strong> answer <em>Yes</em> only if it’s true today for every computer, account, and space that holds contract information. If you’re not sure, answer <em>No</em>.</p>
+        </div>
+      </div>
+
+      <div class="progress" aria-live="polite">
+        <div class="progress-text"><span id="progress-count">0</span> of <span id="progress-total">15</span> answered</div>
+        <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+      </div>
+
+      <form id="l1-form" novalidate>
+        <div id="l1-questions"></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="see-results" disabled>See my results</button>
+          <button type="button" class="btn btn-ghost" id="reset">Start over</button>
+        </div>
+        <p class="hint" id="results-hint">Answer all 15 questions to see your results.</p>
+      </form>
+
+      <section id="results" class="results" hidden tabindex="-1" aria-labelledby="results-title">
+        <div class="results-head">
+          <p class="eyebrow">Your results</p>
+          <h2 id="results-title"></h2>
+          <p id="results-summary" class="lede"></p>
+          <div class="score" aria-hidden="true"><div class="score-bar"><span id="score-fill"></span></div></div>
+        </div>
+        <div id="gaps"></div>
+        <div class="results-note">
+          <p><strong>What happens next:</strong> Level 1 is a self-assessment done every year. A company enters its result in the DoD’s Supplier Performance Risk System (SPRS), and a senior company official affirms it. Level 1 doesn’t allow plans of action (POA&amp;Ms), so every gap has to be fixed before you can claim Level 1.</p>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="print">Print or save results</button>
+          <button type="button" class="btn btn-ghost" id="edit-answers">Change my answers</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- LEVEL 2 -->
+    <section class="panel" role="tabpanel" id="level-2" aria-labelledby="tab-level-2" hidden>
+      <div class="wip">
+        <p class="badge">Under construction</p>
+        <p class="eyebrow">Level 2 · Advanced</p>
+        <h1>Level 2 is under construction</h1>
+        <p class="lede">Level 2 applies to companies that handle <strong>Controlled Unclassified Information (CUI)</strong>, such as technical drawings or specs for a military part. It covers the 110 requirements in NIST SP 800-171 Rev 2.</p>
+        <a class="btn btn-ghost" href="#level-1">Try the Level 1 check</a>
+      </div>
+    </section>
+
+    <!-- LEVEL 3 -->
+    <section class="panel" role="tabpanel" id="level-3" aria-labelledby="tab-level-3" hidden>
+      <div class="wip">
+        <p class="badge">Work in progress</p>
+        <p class="eyebrow">Level 3 · Expert</p>
+        <h1>Level 3 isn’t covered yet</h1>
+        <p class="lede">Level 3 is for a small number of contractors on the most sensitive programs. It builds on Level 2, adds requirements from NIST SP 800-172, and is assessed by the government rather than by the company itself.</p>
+        <p>Most small businesses won’t need Level 3. If yours does, the contracting office will say so in the solicitation.</p>
+        <a class="btn btn-ghost" href="#level-1">Try the Level 1 check</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel" role="tabpanel" id="about" aria-labelledby="tab-about" hidden>
+      <div class="prose">
+        <p class="eyebrow">About</p>
+        <h1>What is CMMC, and which level do I need?</h1>
+        <p>The Cybersecurity Maturity Model Certification (CMMC) is the Department of Defense’s program for checking that contractors protect sensitive information. Which level applies depends on what information your company handles.</p>
+        <div class="level-cards">
+          <div class="level-card">
+            <h3>Level 1</h3>
+            <p>You handle <strong>FCI</strong> only: non-public contract information like pricing, schedules, and order details.</p>
+            <p class="meta">15 requirements · yearly self-assessment</p>
+          </div>
+          <div class="level-card">
+            <h3>Level 2</h3>
+            <p>You handle <strong>CUI</strong>: information like technical drawings, specs, or export-controlled data that’s marked CUI.</p>
+            <p class="meta">110 requirements · NIST SP 800-171</p>
+          </div>
+          <div class="level-card">
+            <h3>Level 3</h3>
+            <p>You work on the most sensitive programs, and the contract says Level 3 is required.</p>
+            <p class="meta">Level 2 plus NIST SP 800-172</p>
+          </div>
+        </div>
+        <h2>About this tool</h2>
+        <p>CMMC Assist turns the official requirements into plain-language yes-or-no questions so a small business owner, not just an IT expert, can see where they stand. It’s a student project, built from the public CMMC Assessment Guides and NIST SP 800-171.</p>
+        <p class="disclaimer">This is a self-check, not an official CMMC assessment, and it isn’t affiliated with the Department of Defense. Your answers stay in your browser and aren’t sent anywhere.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>CMMC Assist · Not an official assessment · Questions last updated November 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/level1.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
