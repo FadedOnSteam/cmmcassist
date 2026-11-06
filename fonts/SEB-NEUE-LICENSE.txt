@@ -1,0 +1,6 @@
+Seb Neue by Sebgarry Design Studio (Tapiwanashe Sebastian Garikayi)
+License: SIL Open Font License (OFL), as listed by the distributor.
+Source: https://www.fontspace.com/seb-neue-font-f34871
+OFL text: https://openfontlicense.org
+
+Files here are the SemiBold (600) and Bold (700) weights, converted from the original .otf files to .woff2 for the web.

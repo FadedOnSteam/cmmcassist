@@ -8,12 +8,30 @@
 window.CMMC_L1 = {
   version: "2026-11",
   families: [
-    { code: "AC", name: "Access Control" },
-    { code: "IA", name: "Identification and Authentication" },
-    { code: "MP", name: "Media Protection" },
-    { code: "PE", name: "Physical Protection" },
-    { code: "SC", name: "System and Communications Protection" },
-    { code: "SI", name: "System and Information Integrity" }
+    {
+      code: "AC", name: "Access Control",
+      description: "Who can get into your computers and accounts, and what each person is allowed to do once they’re in. It also covers outside devices and what you post publicly."
+    },
+    {
+      code: "IA", name: "Identification and Authentication",
+      description: "Knowing exactly who each user and device is, and making them prove it, before letting them in."
+    },
+    {
+      code: "MP", name: "Media Protection",
+      description: "Handling anything that stores information, like hard drives, USB sticks, phones, and paper, so information can’t be recovered once it leaves your hands."
+    },
+    {
+      code: "PE", name: "Physical Protection",
+      description: "Protecting the physical spaces and equipment: locked doors, tracked keys and badges, and keeping an eye on visitors."
+    },
+    {
+      code: "SC", name: "System and Communications Protection",
+      description: "Guarding the point where your network meets the internet, so you control what comes in and goes out, and keeping anything public-facing apart from your internal computers."
+    },
+    {
+      code: "SI", name: "System and Information Integrity",
+      description: "Keeping your computers healthy and free of viruses by installing security updates and running antivirus that stays current and scans regularly."
+    }
   ],
   practices: [
     {

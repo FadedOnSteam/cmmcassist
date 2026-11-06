@@ -76,6 +76,13 @@
     h.querySelector(".family-name").textContent = fam.name;
     group.appendChild(h);
 
+    if (fam.description) {
+      var desc = document.createElement("p");
+      desc.className = "family-desc";
+      desc.textContent = fam.description;
+      group.appendChild(desc);
+    }
+
     items.forEach(function (p) {
       num += 1;
       var key = p.id;
@@ -110,8 +117,7 @@
 
       var det = document.createElement("details");
       det.className = "req";
-      det.innerHTML = '<summary>Official requirement <span class="req-id"></span></summary><p></p>';
-      det.querySelector(".req-id").textContent = p.id;
+      det.innerHTML = '<summary>Official requirement</summary><p></p>';
       det.querySelector("p").textContent = p.requirement;
       fs.appendChild(det);
 
